@@ -1,0 +1,891 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>考场界面</title>
+		<link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="../../Content/site.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/SubMenu/bootstrap-submenu.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Dialog/dialog-plus.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../Scripts/Controls/DataTables/table.css">
+		<script src="../../Scripts/Base/modernizr-2.6.2.js" type="text/javascript"></script>
+		<style type="text/css">
+			/*Tag Boxes
+------------------------------------*/
+.tag-box  {
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.tag-box h2 {
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.tag-box p {
+	margin-bottom: 0;
+}
+
+/*Tag Boxes v1*/
+.tag-box-v1 {
+	border: solid 1px #eee;
+	border-top: solid 2px #72c02c;
+}
+
+/*Tag Boxes v2*/
+.tag-box-v2 {
+	background: #fafafa;
+	border: solid 1px #eee;
+	border-left: solid 2px #72c02c;
+}
+
+/*Tag Boxes v3*/
+.tag-box-v3 {
+	border: solid 2px #eee;
+}
+
+/*Tag Boxes v4*/
+.tag-box-v4 {
+	border: dashed 1px #bbb;
+}
+
+/*Tag Boxes v5*/
+.tag-box-v5 {
+	margin: 20px 0;
+	text-align: center;
+	border: dashed 1px #ccc;
+}
+
+.tag-box-v5 span {
+	color: #555;
+	font-size: 28px;
+	margin-bottom: 0;
+}
+
+/*Tag Boxes v6*/
+.tag-box-v6 {
+	background: #fafafa;
+	border: solid 1px #eee; 
+}
+
+/*Tag Boxes v7*/
+.tag-box-v7 {
+	border: solid 1px #eee;
+	border-bottom: solid 2px #72c02c;
+}
+
+
+/*Panels (Portlets)
+------------------------------------*/
+/*Panel Table*/
+.panel .table {
+    margin-bottom: 0;
+}
+
+/*Panel Blue*/
+.panel-blue {
+   border-color: #3498db;
+}
+
+.panel-blue > .panel-heading {
+   color: #fff;
+   background: #3498db;
+}
+
+/*Panel Red*/
+.panel-red {
+   border-color: #e74c3c;
+}
+
+.panel-red > .panel-heading {
+   color: #fff;
+   background: #e74c3c;
+}
+
+/*Panel Green*/
+.panel-green {
+   border-color: #2ecc71;
+}
+
+.panel-green > .panel-heading {
+   color: #fff;
+   background: #2ecc71;
+}
+
+/*Panel Sea*/
+.panel-sea {
+   border-color: #1abc9c;
+}
+
+.panel-sea > .panel-heading {
+   color: #fff;
+   background: #1abc9c;
+}
+
+/*Panel Orange*/
+.panel-orange {
+   border-color: #e67e22;
+}
+
+.panel-orange > .panel-heading {
+   color: #fff;
+   background: #e67e22;
+}
+
+/*Panel Yellow*/
+.panel-yellow {
+    border-color: #f1c40f;
+}
+
+.panel-yellow > .panel-heading {
+    color: #fff;
+    background: #f1c40f;
+}
+
+/*Panel Grey*/
+.panel-grey {
+   border-color: #95a5a6;
+}
+
+.panel-grey > .panel-heading {
+   color: #fff;
+   background: #95a5a6;
+}
+
+.panel-body{
+    font-size:16px;
+}
+
+
+.answer-box{
+    font-size:20px;
+    padding-right:20px;
+    background-color:#eee;
+}
+.answer-box input{
+    width:18px; height:18px; margin:5px;
+}
+.answer-box:hover{
+    background-color:#F0AD4E;
+}
+.answer-checked{
+    background-color:#F0AD4E;
+}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="container body-content">
+				<h4 class="title">考场界面</h4>
+				<div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <h3>测试考场 【考试时长：<span class="text-danger">120 分钟</span>】</h3>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="hidden" id="isTestRoomTest">
+                            <input type="hidden" id="examRoomID" value="124d821b-ce78-40e6-8108-80867b6b3ea9">
+                            <input type="hidden" id="onTime" value="2017/12/6 13:36:49">
+                            <input type="hidden" id="offTime" value="2018/2/28 14:36:49">
+                            <div class="row text-center" id="timeWarring" style="display:none; background-color:#ff0000;">
+                                <span style="color:#fff; font-size:18px;">已超过考试时间</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body" id="92b28aba-fc33-43de-a666-a3d5d8c6d4bf">
+
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-9ca23b89-ca2b-4492-b296-492f815db584">
+                                        <span class="text-danger" style="font-size:22px;">1、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        在Windows 7操作系统中，将打开窗口拖动到屏幕顶端，窗口会（）
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            关闭
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            消失
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            最大化
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            最小化
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="71e7f549-ec16-4ba9-bc93-16b413ad1d10" name="9ca23b89-ca2b-4492-b296-492f815db584" value="A" onclick="answer('9ca23b89-ca2b-4492-b296-492f815db584', '71e7f549-ec16-4ba9-bc93-16b413ad1d10', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="c08b517e-4ddb-4f62-a7e8-79194e536b16" name="9ca23b89-ca2b-4492-b296-492f815db584" value="B" onclick="answer('9ca23b89-ca2b-4492-b296-492f815db584', 'c08b517e-4ddb-4f62-a7e8-79194e536b16', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="70580de7-114a-451a-aa14-d4206f82e042" name="9ca23b89-ca2b-4492-b296-492f815db584" value="C" onclick="answer('9ca23b89-ca2b-4492-b296-492f815db584', '70580de7-114a-451a-aa14-d4206f82e042', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="666cc1db-2884-4b76-835d-2ecbc3fe6379" name="9ca23b89-ca2b-4492-b296-492f815db584" value="D" onclick="answer('9ca23b89-ca2b-4492-b296-492f815db584', '666cc1db-2884-4b76-835d-2ecbc3fe6379', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-cd3b0cec-3f53-4d9a-a855-c1c610b16610">
+                                        <span class="text-danger" style="font-size:22px;">2、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        在Windows 7操作系统中，显示桌面的快捷键是（）
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            “Win”+“D”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            “Win”+“P”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            “Win”+“Tab”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            “Alt”+“Tab”
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="73abcc1d-d846-41dc-a907-693832b79861" name="cd3b0cec-3f53-4d9a-a855-c1c610b16610" value="A" onclick="answer('cd3b0cec-3f53-4d9a-a855-c1c610b16610', '73abcc1d-d846-41dc-a907-693832b79861', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="c03f5af4-f059-41eb-9745-f2c89c073dd5" name="cd3b0cec-3f53-4d9a-a855-c1c610b16610" value="B" onclick="answer('cd3b0cec-3f53-4d9a-a855-c1c610b16610', 'c03f5af4-f059-41eb-9745-f2c89c073dd5', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="ac605b63-04cc-44e9-b6d2-21c559fd86c5" name="cd3b0cec-3f53-4d9a-a855-c1c610b16610" value="C" onclick="answer('cd3b0cec-3f53-4d9a-a855-c1c610b16610', 'ac605b63-04cc-44e9-b6d2-21c559fd86c5', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="8a3260a3-da50-441e-82cd-287ce822f957" name="cd3b0cec-3f53-4d9a-a855-c1c610b16610" value="D" onclick="answer('cd3b0cec-3f53-4d9a-a855-c1c610b16610', '8a3260a3-da50-441e-82cd-287ce822f957', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-3ecab4bc-51b9-46a6-98f1-f4974bfdc88c">
+                                        <span class="text-danger" style="font-size:22px;">3、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        在Windows 7操作系统中，打开外接显示设置窗口的快捷键是（）
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            “Win”+“D”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            “Win”+“P”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            “Win”+“Tab”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            “Alt”+“Tab”
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="270e74db-7675-4ba5-b669-861dc9ee5fd7" name="3ecab4bc-51b9-46a6-98f1-f4974bfdc88c" value="A" onclick="answer('3ecab4bc-51b9-46a6-98f1-f4974bfdc88c', '270e74db-7675-4ba5-b669-861dc9ee5fd7', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="0b5e74a6-e76e-45ca-90c7-aad55633dedc" name="3ecab4bc-51b9-46a6-98f1-f4974bfdc88c" value="B" onclick="answer('3ecab4bc-51b9-46a6-98f1-f4974bfdc88c', '0b5e74a6-e76e-45ca-90c7-aad55633dedc', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="d29d4d12-1752-4d7e-b904-5df18ab4a3d6" name="3ecab4bc-51b9-46a6-98f1-f4974bfdc88c" value="C" onclick="answer('3ecab4bc-51b9-46a6-98f1-f4974bfdc88c', 'd29d4d12-1752-4d7e-b904-5df18ab4a3d6', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="6ccf9baa-f72b-4daa-9096-85b9e9466361" name="3ecab4bc-51b9-46a6-98f1-f4974bfdc88c" value="D" onclick="answer('3ecab4bc-51b9-46a6-98f1-f4974bfdc88c', '6ccf9baa-f72b-4daa-9096-85b9e9466361', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-dc114ed9-b7c6-433f-b6df-c0650ef55e88">
+                                        <span class="text-danger" style="font-size:22px;">4、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        在Windows 7操作系统中，显示3D桌面效果的快捷键是（  ）
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            “Win”+“D”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            “Win”+“P”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            “Win”+“Tab”
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            “Alt”+“Tab”
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="d44a7a4e-2d70-47fe-87de-03fb92c46002" name="dc114ed9-b7c6-433f-b6df-c0650ef55e88" value="A" onclick="answer('dc114ed9-b7c6-433f-b6df-c0650ef55e88', 'd44a7a4e-2d70-47fe-87de-03fb92c46002', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="8fc9568c-344d-4286-92cd-d1d09d2efcf5" name="dc114ed9-b7c6-433f-b6df-c0650ef55e88" value="B" onclick="answer('dc114ed9-b7c6-433f-b6df-c0650ef55e88', '8fc9568c-344d-4286-92cd-d1d09d2efcf5', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="ad471779-cec3-49e9-8f3c-77e1ff7647f8" name="dc114ed9-b7c6-433f-b6df-c0650ef55e88" value="C" onclick="answer('dc114ed9-b7c6-433f-b6df-c0650ef55e88', 'ad471779-cec3-49e9-8f3c-77e1ff7647f8', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="b8ed265f-ea52-4e46-b950-591d1fdd2b44" name="dc114ed9-b7c6-433f-b6df-c0650ef55e88" value="D" onclick="answer('dc114ed9-b7c6-433f-b6df-c0650ef55e88', 'b8ed265f-ea52-4e46-b950-591d1fdd2b44', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-d6413052-e5cd-4c53-bbd4-7ddd95e0b82a">
+                                        <span class="text-danger" style="font-size:22px;">5、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        电脑中的时间每次开机都不准确可能的故障是（  ）
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            主板损坏
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            CPU损坏
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            内存损坏
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            主板电池没电
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="902205ff-2b1c-43ea-aa7f-734885604a7c" name="d6413052-e5cd-4c53-bbd4-7ddd95e0b82a" value="A" onclick="answer('d6413052-e5cd-4c53-bbd4-7ddd95e0b82a', '902205ff-2b1c-43ea-aa7f-734885604a7c', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="54cf2311-3034-4588-a22e-a0aa8743bbc9" name="d6413052-e5cd-4c53-bbd4-7ddd95e0b82a" value="B" onclick="answer('d6413052-e5cd-4c53-bbd4-7ddd95e0b82a', '54cf2311-3034-4588-a22e-a0aa8743bbc9', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="ef7f225b-543f-441e-a2a0-6807691cf5aa" name="d6413052-e5cd-4c53-bbd4-7ddd95e0b82a" value="C" onclick="answer('d6413052-e5cd-4c53-bbd4-7ddd95e0b82a', 'ef7f225b-543f-441e-a2a0-6807691cf5aa', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="fbacc2b0-9918-4024-8bf9-be1f08482d33" name="d6413052-e5cd-4c53-bbd4-7ddd95e0b82a" value="D" onclick="answer('d6413052-e5cd-4c53-bbd4-7ddd95e0b82a', 'fbacc2b0-9918-4024-8bf9-be1f08482d33', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-bc8f3820-cd91-4f07-b198-660169d7f496">
+                                        <span class="text-danger" style="font-size:22px;">6、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        以下哪个部件出现损坏时，计算机启动时候会有警报声（  ）
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            鼠标
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            显卡
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            CPU
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            打印机
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="3e4e67dc-6ec1-4422-aadf-7341eae9ba28" name="bc8f3820-cd91-4f07-b198-660169d7f496" value="A" onclick="answer('bc8f3820-cd91-4f07-b198-660169d7f496', '3e4e67dc-6ec1-4422-aadf-7341eae9ba28', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="2985af68-75ab-420a-a2a7-1e81e7560441" name="bc8f3820-cd91-4f07-b198-660169d7f496" value="B" onclick="answer('bc8f3820-cd91-4f07-b198-660169d7f496', '2985af68-75ab-420a-a2a7-1e81e7560441', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="e0b749a8-fcae-41f5-9d94-3933bd8644a0" name="bc8f3820-cd91-4f07-b198-660169d7f496" value="C" onclick="answer('bc8f3820-cd91-4f07-b198-660169d7f496', 'e0b749a8-fcae-41f5-9d94-3933bd8644a0', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="61a20f21-c0fb-493c-bda5-a36b0dd0d440" name="bc8f3820-cd91-4f07-b198-660169d7f496" value="D" onclick="answer('bc8f3820-cd91-4f07-b198-660169d7f496', '61a20f21-c0fb-493c-bda5-a36b0dd0d440', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-0529557c-6388-4135-829f-854c839a4fc2">
+                                        <span class="text-danger" style="font-size:22px;">7、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        通过（  ）键，可以激活小键盘数字功能
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            Nun Lock
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            Tab
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            Caps Lock
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            Shift
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="a538d320-6e00-49f8-95b4-e9519cbef55d" name="0529557c-6388-4135-829f-854c839a4fc2" value="A" onclick="answer('0529557c-6388-4135-829f-854c839a4fc2', 'a538d320-6e00-49f8-95b4-e9519cbef55d', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="2da89b9d-44e8-4fa0-a9f7-250f50a4f80b" name="0529557c-6388-4135-829f-854c839a4fc2" value="B" onclick="answer('0529557c-6388-4135-829f-854c839a4fc2', '2da89b9d-44e8-4fa0-a9f7-250f50a4f80b', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="afa32661-5f6c-416f-adf8-1fa521e8c0f1" name="0529557c-6388-4135-829f-854c839a4fc2" value="C" onclick="answer('0529557c-6388-4135-829f-854c839a4fc2', 'afa32661-5f6c-416f-adf8-1fa521e8c0f1', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="bfe2ef39-2d62-4964-9ef1-d8e448186be3" name="0529557c-6388-4135-829f-854c839a4fc2" value="D" onclick="answer('0529557c-6388-4135-829f-854c839a4fc2', 'bfe2ef39-2d62-4964-9ef1-d8e448186be3', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-cac257e8-45b3-48f1-b894-b4b624f729a4">
+                                        <span class="text-danger" style="font-size:22px;">8、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        要选定多个不连续的文件或文件夹，可以按住“（  ）”键不放，用鼠标依次单击要选定的文件或文件夹。
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            Shift
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            Tab
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            Alt
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            Ctrl
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="e4849594-8fa0-4ed7-b033-60ea3fa8a8b9" name="cac257e8-45b3-48f1-b894-b4b624f729a4" value="A" onclick="answer('cac257e8-45b3-48f1-b894-b4b624f729a4', 'e4849594-8fa0-4ed7-b033-60ea3fa8a8b9', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="cf5b27a9-43f3-4899-adb9-4b2afeec9aab" name="cac257e8-45b3-48f1-b894-b4b624f729a4" value="B" onclick="answer('cac257e8-45b3-48f1-b894-b4b624f729a4', 'cf5b27a9-43f3-4899-adb9-4b2afeec9aab', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="8e850859-a554-4667-81b1-2ea3567bd0f5" name="cac257e8-45b3-48f1-b894-b4b624f729a4" value="C" onclick="answer('cac257e8-45b3-48f1-b894-b4b624f729a4', '8e850859-a554-4667-81b1-2ea3567bd0f5', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="ceb63146-a956-4dae-a9f6-a373c5367ab0" name="cac257e8-45b3-48f1-b894-b4b624f729a4" value="D" onclick="answer('cac257e8-45b3-48f1-b894-b4b624f729a4', 'ceb63146-a956-4dae-a9f6-a373c5367ab0', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-bf7a1482-fadf-4b45-aaeb-6fb4e37ef895">
+                                        <span class="text-danger" style="font-size:22px;">9、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        Realplayer不可以播放（ ）格式的文件
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            DOC
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            MP3
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            WAV
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            RM
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="6c06a1f9-5104-4139-879b-40a057830aea" name="bf7a1482-fadf-4b45-aaeb-6fb4e37ef895" value="A" onclick="answer('bf7a1482-fadf-4b45-aaeb-6fb4e37ef895', '6c06a1f9-5104-4139-879b-40a057830aea', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="f54b45a1-ed47-4c28-80c7-80d1765dcc30" name="bf7a1482-fadf-4b45-aaeb-6fb4e37ef895" value="B" onclick="answer('bf7a1482-fadf-4b45-aaeb-6fb4e37ef895', 'f54b45a1-ed47-4c28-80c7-80d1765dcc30', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="6e28ccf9-3a0e-4f6a-a6f6-ca2932bd808c" name="bf7a1482-fadf-4b45-aaeb-6fb4e37ef895" value="C" onclick="answer('bf7a1482-fadf-4b45-aaeb-6fb4e37ef895', '6e28ccf9-3a0e-4f6a-a6f6-ca2932bd808c', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="c2ac8f0a-c76d-4e75-8ca1-cae8b037f0c8" name="bf7a1482-fadf-4b45-aaeb-6fb4e37ef895" value="D" onclick="answer('bf7a1482-fadf-4b45-aaeb-6fb4e37ef895', 'c2ac8f0a-c76d-4e75-8ca1-cae8b037f0c8', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" id="t-1b9289d6-177d-4756-8f3f-6104c30f5a3e">
+                                        <span class="text-danger" style="font-size:22px;">10、</span>
+                                        <span class="text-danger">
+                                            <span>单选题</span>
+                                        </span>
+                                        不删除文件将磁盘装换成NTFS格式需要输入以下哪种命令？（  ）
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p style="margin:10px;">
+                                            A<span>.</span>
+                                            convert 盘符：/as:ntfs
+                                        </p>
+                                        <p style="margin:10px;">
+                                            B<span>.</span>
+                                            convert 盘符：/bs:ntfs
+                                        </p>
+                                        <p style="margin:10px;">
+                                            C<span>.</span>
+                                            convert 盘符：/cs:ntfs
+                                        </p>
+                                        <p style="margin:10px;">
+                                            D<span>.</span>
+                                            convert 盘符：/fs:ntfs
+                                        </p>
+                                        <div class="input-group">
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="f1a1f8d6-5bb9-4e4c-b194-741f5712698d" name="1b9289d6-177d-4756-8f3f-6104c30f5a3e" value="A" onclick="answer('1b9289d6-177d-4756-8f3f-6104c30f5a3e', 'f1a1f8d6-5bb9-4e4c-b194-741f5712698d', 'A')"><span>A</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="37a02964-4436-4711-b3b5-055b8e4cf8f9" name="1b9289d6-177d-4756-8f3f-6104c30f5a3e" value="B" onclick="answer('1b9289d6-177d-4756-8f3f-6104c30f5a3e', '37a02964-4436-4711-b3b5-055b8e4cf8f9', 'B')"><span>B</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="c972d909-a34d-4004-9b5d-12768f601651" name="1b9289d6-177d-4756-8f3f-6104c30f5a3e" value="C" onclick="answer('1b9289d6-177d-4756-8f3f-6104c30f5a3e', 'c972d909-a34d-4004-9b5d-12768f601651', 'C')"><span>C</span>
+                                            </div>
+                                            <div class="checkbox-inline answer-box ">
+                                                <input type="radio" class="radio radio-inline" id="173eddcb-22a9-42de-8e3f-06529d2491f4" name="1b9289d6-177d-4756-8f3f-6104c30f5a3e" value="D" onclick="answer('1b9289d6-177d-4756-8f3f-6104c30f5a3e', '173eddcb-22a9-42de-8e3f-06529d2491f4', 'D')"><span>D</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".test">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <span class="navbar-brand">已过：<span class="text-danger" id="passTime"></span>分钟</span>
+                        </div>
+                        <div class="navbar-collapse collapse test">
+                            <div class="container">
+                                <div class="row text-center">
+                                    <a href="#" class="btn btn-danger" onclick="postTest(); return false;">交卷</a>
+                                </div>
+                                <div class="row text-center" style="font-size:18px;">
+                                    <form action="/Test?Length=4" data-ajax="true" data-ajax-loading="#Load_92b28aba-fc33-43de-a666-a3d5d8c6d4bf" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-update="#92b28aba-fc33-43de-a666-a3d5d8c6d4bf" id="AjaxPagingForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="edSqMRl9grItGmxbx0sfmzSEfvO_7DcERh6C6iNF6ox2jggCihdbAGZnuk0zccYEXwFF6HMhShrXnwh4d904wE0yM8eubU2j5USf8ql7ZXbw_u0mdKhdqtHsXoQzlAxmUNDtxAYk0X7NNGO9HyCbqQ2"><input data-val="true" data-val-number="字段 PageIndex 必须是一个数字。" data-val-required="PageIndex 字段是必需的。" id="PageIndex" name="PageIndex" type="hidden" value="1"><input data-val="true" data-val-number="字段 PageSize 必须是一个数字。" data-val-required="PageSize 字段是必需的。" id="PageSize" name="PageSize" type="hidden" value="10"><input id="Sort" name="Sort" type="hidden" value="0"><input id="PagingSerializationStr" name="PagingSerializationStr" type="hidden" value="AAEAAAD/////AQAAAAAAAAAMAgAAADpEVE8sIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBQEAAAAWRFRPLlBhZ2luZ01vZGVsLlBhZ2luZwoAAAAZPEV4ZWN1U3FsPmtfX0JhY2tpbmdGaWVsZBU8U29ydD5rX19CYWNraW5nRmllbGQbPENvbnN0Q29uZHM+a19fQmFja2luZ0ZpZWxkHTxEeW5hbWljQ29uZHM+a19fQmFja2luZ0ZpZWxkFjxTb3J0cz5rX19CYWNraW5nRmllbGQTPElEPmtfX0JhY2tpbmdGaWVsZBs8QWN0aW9uUG9zdD5rX19CYWNraW5nRmllbGQbPENvbnRyb2xsZXI+a19fQmFja2luZ0ZpZWxkHTxBY3Rpb25FeHBvcnQ+a19fQmFja2luZ0ZpZWxkGzxTb21lU3RyaW5nPmtfX0JhY2tpbmdGaWVsZAEBAwMDAQEBAQGEAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbRFRPLlBhZ2luZ01vZGVsLlBhZ2luZ0NvbmRQYXJhbWV0ZXIsIERUTywgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxdXYcBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tEVE8uUGFnaW5nTW9kZWwuUGFnaW5nRHluYW1pY1BhcmFtZXRlciwgRFRPLCBWZXJzaW9uPTEuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbF1dgAFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RUTy5QYWdpbmdNb2RlbC5QYWdpbmdTb3J0VmFsdWUsIERUTywgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxdXQIAAAAGAwAAAL0Bc2VsZWN0IGEuKiwgYi5JRCBhcyBBbnN3ZXJJRCwgYi5BbnN3ZXJLZXksIGIuSXNDb3JyZWN0IGZyb20gUXVlc3Rpb24gYSBsZWZ0IGpvaW4gKHNlbGVjdCAqIGZyb20gVGVzdEhpc3Rvcnkgd2hlcmUgVGVzdGVlSUQgPSAnMDliMGYwYTEtODJiYy00ZGQxLWE0NjQtOTA0YWI5YWI4ODY0JykgYiBvbiBhLklEID0gYi5RdWVzdGlvbklEBgQAAAAKYS5JbmR4IEFTQwkFAAAACgoGBgAAACQ5MmIyOGFiYS1mYzMzLTQzZGUtYTY2Ni1hM2Q1ZDhjNmQ0YmYGBwAAAAVJbmRleAYIAAAABFRlc3QGCQAAAAAJCQAAAAQFAAAAhAFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RUTy5QYWdpbmdNb2RlbC5QYWdpbmdDb25kUGFyYW1ldGVyLCBEVE8sIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsXV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQAACVEVE8uUGFnaW5nTW9kZWwuUGFnaW5nQ29uZFBhcmFtZXRlcltdAgAAAAgICQoAAAABAAAAAQAAAAcKAAAAAAEAAAAEAAAABCNEVE8uUGFnaW5nTW9kZWwuUGFnaW5nQ29uZFBhcmFtZXRlcgIAAAAJCwAAAA0DBQsAAAAjRFRPLlBhZ2luZ01vZGVsLlBhZ2luZ0NvbmRQYXJhbWV0ZXICAAAAFTxDb25kPmtfX0JhY2tpbmdGaWVsZBc8VmFsdWVzPmtfX0JhY2tpbmdGaWVsZAEEGkRUTy5QYWdpbmdNb2RlbC5LZXlWYWx1ZVtdAgAAAAIAAAAGDAAAABFhLkV4YW1Sb29tSUQgPSBAMAkNAAAABw0AAAAAAQAAAAEAAAAEGERUTy5QYWdpbmdNb2RlbC5LZXlWYWx1ZQIAAAAJDgAAAAUOAAAAGERUTy5QYWdpbmdNb2RlbC5LZXlWYWx1ZQIAAAAUPEtleT5rX19CYWNraW5nRmllbGQWPFZhbHVlPmtfX0JhY2tpbmdGaWVsZAEBAgAAAAYPAAAAEHVuaXF1ZWlkZW50aWZpZXIGEAAAACQxMjRkODIxYi1jZTc4LTQwZTYtODEwOC04MDg2N2I2YjNlYTkL"><input id="Cond0" name="Cond0" type="hidden" value=""><input id="Cond1" name="Cond1" type="hidden" value=""><input id="Cond2" name="Cond2" type="hidden" value=""><input id="Cond3" name="Cond3" type="hidden" value=""><input id="Cond4" name="Cond4" type="hidden" value=""><input id="Cond5" name="Cond5" type="hidden" value=""><input id="Cond6" name="Cond6" type="hidden" value=""><input id="Cond7" name="Cond7" type="hidden" value=""><input id="Cond8" name="Cond8" type="hidden" value=""><input id="Cond9" name="Cond9" type="hidden" value=""><input id="Cond10" name="Cond10" type="hidden" value=""><input id="Cond11" name="Cond11" type="hidden" value=""><input id="Cond12" name="Cond12" type="hidden" value=""><input id="Cond13" name="Cond13" type="hidden" value=""><input id="Cond14" name="Cond14" type="hidden" value=""><input id="Cond15" name="Cond15" type="hidden" value=""><input id="Cond16" name="Cond16" type="hidden" value=""><input id="Cond17" name="Cond17" type="hidden" value=""><input id="Cond18" name="Cond18" type="hidden" value=""><input id="Cond19" name="Cond19" type="hidden" value=""></form>
+                                    <input type="hidden" id="eController" value="Test">
+                                    <input type="hidden" id="eActionExport" value="">
+                                    <input type="hidden" id="PageControlPageCount" value="5">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 paging">
+                                            <div class="btn-group">
+                                                <select class="form-control input-inline" id="PageSize_Select" onchange="changePageSize()" style="height:30px;">
+                                                    <option value="10" selected="">10</option>
+                                                    <option value="20">20</option>
+                                                    <option value="30">30</option>
+                                                    <option value="40">40</option>
+                                                    <option value="50">50</option>
+                                                    <option value="60">60</option>
+                                                    <option value="70">70</option>
+                                                    <option value="80">80</option>
+                                                    <option value="90">90</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                            </div>
+                                            <div class="btn-group">
+                                                <a class="btn btn-sm btn-info disabled" href="#" onclick="turnToPage('1'); return false;">首页</a>
+                                                <a class="btn btn-sm btn-info disabled" href="#" onclick="turnToPage('0'); return false;">上页</a>
+                                                <a class="btn btn-default btn-sm disabled" href="javascript:;">记录数:<span class="text-danger">50</span></a>
+                                                <a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;">当前页:<span class="text-success">1</span> / <span class="text-danger">5</span></a>
+                                                <a class="btn btn-sm btn-primary" href="#" onclick="turnToPage('2'); return false;">下页</a>
+                                                <a class="btn btn-sm btn-primary" href="#" onclick="turnToPage('5'); return false;">末页</a>
+                                            </div>
+                                            <div class="btn-group">
+                                                <a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;"><span>转到</span></a>
+                                                <input class="btn btn-default btn-sm btn-sm form-control" style="text-align: center; width:50px; height:30px;" type="text" id="PageIndexValue" name="PageIndexValue">
+                                                <a class="btn btn-sm btn-primary" href="#" onclick="goAjaxPgIndex(); return false;" title="转到指定页面">GO</a>
+                                            </div>
+                                            <div class="btn-group">
+                                                <img id="Load_92b28aba-fc33-43de-a666-a3d5d8c6d4bf" style="display:none;" src="/Images/loading.gif">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+    function goAjaxPgIndex() {
+        if (/^\d+$/.test($("#PageIndexValue").val()) == true && parseInt($("#PageIndexValue").val()) <= parseInt($("#PageControlPageCount").val())) {
+            turnToPage($("#PageIndexValue").val());
+            return false;
+        }
+        else
+            alert("必须为整数，并且不能大于总页数。");
+        return false;
+    }
+
+    function refreshTable() {
+        $("#AjaxPagingForm").submit();
+    }
+
+    function turnToPage(pageindex) {
+        $("#PageIndex").val(pageindex);
+        $("#AjaxPagingForm").submit();
+    }
+
+    function changePageSize() {
+        $("#PageSize").val($("#PageSize_Select").val());
+        $("#PageIndex").val("1");
+        $("#AjaxPagingForm").submit();
+    }
+
+    function changePageSort() {
+        $("#Sort").val($("#PageSort_Select").val());
+        $("#PageIndex").val("1");
+        $("#AjaxPagingForm").submit();
+    }
+
+    //全选或取消全选
+    function checkAll(mainCheckID, checkItemName) {
+        $("input[name='" + checkItemName + "']").prop("checked", $("#" + mainCheckID).prop("checked"));
+    }
+    //赋值搜索条件并搜索
+    function postSearch() {
+        if ($("#sCond0").length > 0)
+            $("#Cond0").val($.trim($("#sCond0").val()));
+        if ($("#sCond1").length > 0)
+            $("#Cond1").val($.trim($("#sCond1").val()));
+        if ($("#sCond2").length > 0)
+            $("#Cond2").val($.trim($("#sCond2").val()));
+        if ($("#sCond3").length > 0)
+            $("#Cond3").val($.trim($("#sCond3").val()));
+        if ($("#sCond4").length > 0)
+            $("#Cond4").val($.trim($("#sCond4").val()));
+        if ($("#sCond5").length > 0)
+            $("#Cond5").val($.trim($("#sCond5").val()));
+        if ($("#sCond6").length > 0)
+            $("#Cond6").val($.trim($("#sCond6").val()));
+        if ($("#sCond7").length > 0)
+            $("#Cond7").val($.trim($("#sCond7").val()));
+        if ($("#sCond8").length > 0)
+            $("#Cond8").val($.trim($("#sCond8").val()));
+        if ($("#sCond9").length > 0)
+            $("#Cond9").val($.trim($("#sCond9").val()));
+        if ($("#sCond10").length > 0)
+            $("#Cond10").val($.trim($("#sCond10").val()));
+        if ($("#sCond11").length > 0)
+            $("#Cond11").val($.trim($("#sCond11").val()));
+        if ($("#sCond12").length > 0)
+            $("#Cond12").val($.trim($("#sCond12").val()));
+        if ($("#sCond13").length > 0)
+            $("#Cond13").val($.trim($("#sCond13").val()));
+        if ($("#sCond14").length > 0)
+            $("#Cond14").val($.trim($("#sCond14").val()));
+        if ($("#sCond15").length > 0)
+            $("#Cond15").val($.trim($("#sCond15").val()));
+        if ($("#sCond16").length > 0)
+            $("#Cond16").val($.trim($("#sCond16").val()));
+        if ($("#sCond17").length > 0)
+            $("#Cond17").val($.trim($("#sCond17").val()));
+        if ($("#sCond18").length > 0)
+            $("#Cond18").val($.trim($("#sCond18").val()));
+        if ($("#sCond19").length > 0)
+            $("#Cond19").val($.trim($("#sCond19").val()));
+
+        $("#AjaxPagingForm").submit();
+    };
+    //展开更多搜索项
+    function MoreSearch(sdiv) {
+        $("#" + sdiv).toggle(300);
+    }
+
+    //设置导出条件
+    function setExpGene(eType) {
+        $.postAntiForgery("/" + $("#eController").val() + "/" + $("#eActionExport").val() + "/", {
+            ExpType: eType,
+            PageIndex: $("#PageIndex").val(),
+            PageSize: $("#PageSize").val(),
+            Sort: $("#Sort").val(),
+            PagingSerializationStr: $("#PagingSerializationStr").val(),
+            Cond0: $.trim($("#sCond0").val()),
+            Cond1: $.trim($("#sCond1").val()),
+            Cond2: $.trim($("#sCond2").val()),
+            Cond3: $.trim($("#sCond3").val()),
+            Cond4: $.trim($("#sCond4").val()),
+            Cond5: $.trim($("#sCond5").val()),
+            Cond6: $.trim($("#sCond6").val()),
+            Cond7: $.trim($("#sCond7").val()),
+            Cond8: $.trim($("#sCond8").val()),
+            Cond9: $.trim($("#sCond9").val()),
+            Cond10: $.trim($("#sCond10").val()),
+            Cond11: $.trim($("#sCond11").val()),
+            Cond12: $.trim($("#sCond12").val()),
+            Cond13: $.trim($("#sCond13").val()),
+            Cond14: $.trim($("#sCond14").val()),
+            Cond15: $.trim($("#sCond15").val()),
+            Cond16: $.trim($("#sCond16").val()),
+            Cond17: $.trim($("#sCond17").val()),
+            Cond18: $.trim($("#sCond18").val()),
+            Cond19: $.trim($("#sCond19").val()),
+        }, function (json) {
+            if (json.Success) {
+                window.open("/File/Download?id=" + json.FileName);
+            }
+            else
+                alert("执行失败，请稍后再试。");
+        });
+    }
+    //导出选择项
+    function exportSelected() {
+        if ($("#SelectAll").length > 0) {
+            var str = "";
+            $("[name='Check_Item']:checked").each(function () {
+                str += $(this).val() + ",";
+            })
+            if (str.length > 0){
+                setExpGene(str.substr(0, str.length - 1));
+            }
+            else
+                alert("没有选择的项。");
+        }
+        else
+            alert("页面缺少选择控件，此功能不可用。");
+    }
+    //导出当前页
+    function exportPage() {
+        setExpGene("exp1");
+    }
+    //导出所有
+    function exportAll() {
+        setExpGene("exp2");
+    }
+                                    </script>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+				
+				
+			</div>
+		</div>
+		<script src="../../Scripts/Base/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery-migrate-1.2.1.js"></script>
+		<script src="../../Scripts/Base/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.antiforgery.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/bootstrap.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/SubMenu/bootstrap-submenu.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Dialog/dialog-plus.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+		<script src="../../Scripts/Views/PublicFunction.js" type="text/javascript"></script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>知识库分类管理</title>
+		<link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="../../Content/site.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/SubMenu/bootstrap-submenu.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Dialog/dialog-plus.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../Scripts/Controls/DataTables/table.css">
+		<script src="../../Scripts/Base/modernizr-2.6.2.js" type="text/javascript"></script>
+		<!--[if lt IE 9]>
+		         <style>
+				.body-content{
+					width: 1140px;
+				}
+		         </style>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="container body-content">
+				<h4 class="title">知识库分类管理</h4>
+				<div class="row marbom">
+					<div class="col-md-8 col-sm-8 col-xs-8">
+						<div class="btn-group btn-group-sm">
+				            <a href="javascript:;" class="btn btn-sm btn-success">新增知识分类</a>
+				            <a href="javascript:;" class="btn btn-sm btn-success">删除选项</a>
+				        </div>
+					</div>
+					<div id="search-box" class="col-md-4 col-sm-4 col-xs-4">
+						<div class="input-group input-group-sm">
+				            <span class="input-group-addon">名称</span>
+				            <input type="text" class="form-control" id="sCond0">
+				            <span class="input-group-btn">
+				                <a class="btn btn-success" href="javascript:;">搜索</a>
+				            </span>
+				        </div>
+					</div>
+				</div>
+				
+				<table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th><input id="SelectAll" type="checkbox" onclick="checkAll('SelectAll', 'Check_Item')"></th>
+                                <th>序号</th>
+                                <th>名称</th>
+                                <th>备注</th>
+                                <th style="width:90px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="63555e40-2ddb-47e6-9685-00b1876cdbde">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    变更管理
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('63555e40-2ddb-47e6-9685-00b1876cdbde'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('63555e40-2ddb-47e6-9685-00b1876cdbde'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="2a6bd34b-c981-4d95-834d-010917ea7b8a">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    问题管理
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('2a6bd34b-c981-4d95-834d-010917ea7b8a'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('2a6bd34b-c981-4d95-834d-010917ea7b8a'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="9c562f3e-5ed1-49fd-8d66-0d732c8b24ef">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    数据中心-主机存储知识
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('9c562f3e-5ed1-49fd-8d66-0d732c8b24ef'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('9c562f3e-5ed1-49fd-8d66-0d732c8b24ef'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="394e65f6-d57a-4830-9408-0ffd5211799b">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    公司合同管理办法
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('394e65f6-d57a-4830-9408-0ffd5211799b'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('394e65f6-d57a-4830-9408-0ffd5211799b'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="645dce51-65e4-42e5-9297-1173abadb8ff">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    服务报告管理
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('645dce51-65e4-42e5-9297-1173abadb8ff'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('645dce51-65e4-42e5-9297-1173abadb8ff'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="85e75428-3d3a-4fdd-bc0f-12dd835bb9ec">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    安全防护管理
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('85e75428-3d3a-4fdd-bc0f-12dd835bb9ec'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('85e75428-3d3a-4fdd-bc0f-12dd835bb9ec'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="37c1b3b8-98ab-4800-b860-130fedca48f2">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    数据中心-操作系统知识
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('37c1b3b8-98ab-4800-b860-130fedca48f2'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('37c1b3b8-98ab-4800-b860-130fedca48f2'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="2774b778-19b1-44dc-8234-195d14ffb342">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    公司信息化工作管理规定
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('2774b778-19b1-44dc-8234-195d14ffb342'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('2774b778-19b1-44dc-8234-195d14ffb342'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="79d75fb6-45d6-48cf-b45a-1b55a30bd8c1">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    安全督查管理
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('79d75fb6-45d6-48cf-b45a-1b55a30bd8c1'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('79d75fb6-45d6-48cf-b45a-1b55a30bd8c1'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="64690c3b-dd06-4a1c-bcce-1c3895a3d65f">
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    公司信息安全等级保护管理办法
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="#" title="编辑" onclick="edit('64690c3b-dd06-4a1c-bcce-1c3895a3d65f'); return false;"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-xs btn-success" href="#" title="删除" onclick="del('64690c3b-dd06-4a1c-bcce-1c3895a3d65f'); return false;"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <div class=" hidden-xs paging">
+                    <div class="btn-group">
+                        <a class="btn btn-sm btn-primary" href="javascript:;">首页</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">上页</a>
+                        <a class="btn btn-default btn-sm disabled" href="javascript:;">记录数:<span class="text-danger">10</span></a>
+                        <a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;">当前页:<span class="text-success">1</span> / <span class="text-danger">1</span></a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">下页</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">末页</a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;"><span>转到</span></a>
+                        <input class="btn btn-default btn-sm btn-sm form-control" style="text-align: center; width:50px; height:30px;" type="text" id="PageIndexValue" name="PageIndexValue">
+                        <a class="btn btn-sm btn-primary" href="javascript:;" title="转到指定页面">GO</a>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<script src="../../Scripts/Base/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery-migrate-1.2.1.js"></script>
+		<script src="../../Scripts/Base/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.antiforgery.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/bootstrap.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/SubMenu/bootstrap-submenu.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Dialog/dialog-plus.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+		<script src="../../Scripts/Views/PublicFunction.js" type="text/javascript"></script>
+		
+	</body>
+
+</html>

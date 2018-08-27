@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>treeTable</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.treetable.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.treetable.theme.default.css" />
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.treetable.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<table width="500" id="test" border="1" cellspacing="0" cellpadding="0">
+			<tr data-tt-id="1">
+				<td>广西</td>
+				<td>内容</td>
+				<td>操作</td>
+			</tr>
+			<tr data-tt-id="2" data-tt-parent-id="1">
+				<td>南宁</td>
+				<td>内容</td>
+				<td>内容</td>
+			</tr>
+			<tr data-tt-id="3" data-tt-parent-id="2">
+				<td>兴宁区</td>
+				<td>内容</td>
+				<td>内容</td>
+			</tr>
+			<tr data-tt-id="4" data-tt-parent-id="1">
+				<td>柳州</td>
+				<td>内容</td>
+				<td>内容</td>
+			</tr>
+			<tr data-tt-id="5">
+				<td>广东</td>
+				<td>内容</td>
+				<td>内容</td>
+			</tr>
+			<tr data-tt-id="6">
+				<td>湖南</td>
+				<td>内容</td>
+				<td>内容</td>
+			</tr>
+			<tr data-tt-id="7" data-tt-parent-id="6">
+				<td>长沙</td>
+				<td>内容</td>
+				<td>内容</td>
+			</tr>
+
+		</table>
+		<button id="btn">btn</button>
+		<script type="text/javascript">
+			$("#test").treetable({
+				expandable: true, //树应该是可扩展的吗？ 可扩展树包含使每个分支具有可折叠/可扩展的子键的按钮。
+				indent: 20, //每个分支应缩进的像素数
+				isPadding: true,
+				//initialState :"collapsed"
+				//column: 1, //表中应显示为树状结构的列数
+				clickableNodeNames: true,
+				onInitialized: function() {
+					$("#test tr:lt(2)").each(function(i) {
+						$(this).find("a").trigger('click');
+					})
+
+				}
+			});
+			$("#btn").click(function(){
+				$("#test").treetable("expandAll");
+			})
+		</script>
+	</body>
+
+</html>

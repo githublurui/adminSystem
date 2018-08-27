@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>帮助文档管理</title>
+		<link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="../../Content/site.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/SubMenu/bootstrap-submenu.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Dialog/dialog-plus.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../Scripts/Controls/DataTables/table.css">
+		<script src="../../Scripts/Base/modernizr-2.6.2.js" type="text/javascript"></script>
+		<!--[if lt IE 9]>
+		         <style>
+				.body-content{
+					width: 1140px;
+				}
+		         </style>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="container body-content">
+				<h4 class="title">帮助文档管理</h4>
+				<div class="row marbom">
+					<div class="col-md-8 col-sm-8 col-xs-8">
+						<div class="btn-group btn-group-sm">
+				            <a href="javascript:;" class="btn btn-sm btn-success">新增知识分类</a>
+				            <a href="javascript:;" class="btn btn-sm btn-success">删除选项</a>
+				        </div>
+					</div>
+					<div id="search-box" class="col-md-4 col-sm-4 col-xs-4">
+						<div class="input-group input-group-sm">
+				            <span class="input-group-addon">名称</span>
+				            <input type="text" class="form-control" id="sCond0">
+				            <span class="input-group-btn">
+				                <a class="btn btn-success" href="javascript:;">搜索</a>
+				            </span>
+				        </div>
+					</div>
+				</div>
+				
+				<table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width:30px;"><input id="SelectAll" type="checkbox" onclick="checkAll('SelectAll', 'Check_Item')"></th>
+                                <th>标题</th>
+                                <th>发布人</th>
+                                <th>发布时间</th>
+                                <th style="width:60px;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="8d9b6ea5-584a-48b5-8f86-4cb82d83d8fb">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/25 20:53:58
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;8d9b6ea5-584a-48b5-8f86-4cb82d83d8fb&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="de4629da-036f-476c-b6cb-2232751f4c6a">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/25 20:05:38
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;de4629da-036f-476c-b6cb-2232751f4c6a&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="9ec39258-cc4b-4754-9644-6c1cdacbb7e9">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1。</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/25 20:05:25
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;9ec39258-cc4b-4754-9644-6c1cdacbb7e9&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="818a3226-6368-4f04-bdfd-445e8ada40d8">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1。</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/25 20:05:14
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;818a3226-6368-4f04-bdfd-445e8ada40d8&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="685d9b51-5304-4c34-afbe-89278b130dad">
+                                </td>
+                                <td>
+                                    <a href="help.html"> 帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/25 21:07:42
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;685d9b51-5304-4c34-afbe-89278b130dad&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="f1d392c1-0d9f-4f6d-9bf3-d7199d8924b1">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/25 21:07:42
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;f1d392c1-0d9f-4f6d-9bf3-d7199d8924b1&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="54980395-8ccd-4de9-9ea3-1dc22a7c128c">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/25 21:07:42
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;54980395-8ccd-4de9-9ea3-1dc22a7c128c&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="a0ec74f6-0ed9-4c51-b089-86591e80a9a8">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/22 10:53:45
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;a0ec74f6-0ed9-4c51-b089-86591e80a9a8&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="7346acd5-54c5-4386-aea2-dcbda95d5a5e">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/20 14:11:13
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;7346acd5-54c5-4386-aea2-dcbda95d5a5e&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="Check_Item" value="7350d8d3-ab0e-4fc6-b57a-6ffb27f1649b">
+                                </td>
+                                <td>
+                                    <a href="help.html">帮助文档1</a>
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2017/6/20 12:06:03
+                                </td>
+                                <td>
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-xs btn-success" href="javascript:postToUrl('确定执行删除操作？', '/SiteMessage/DeleteMySiteMessages', {ids:&quot;7350d8d3-ab0e-4fc6-b57a-6ffb27f1649b&quot;});" title="删除"><i class="glyphicon glyphicon-remove"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <div class=" hidden-xs paging">
+                    <div class="btn-group">
+                        <a class="btn btn-sm btn-primary" href="javascript:;">首页</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">上页</a>
+                        <a class="btn btn-default btn-sm disabled" href="javascript:;">记录数:<span class="text-danger">10</span></a>
+                        <a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;">当前页:<span class="text-success">1</span> / <span class="text-danger">1</span></a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">下页</a>
+                        <a class="btn btn-sm btn-primary" href="javascript:;">末页</a>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;"><span>转到</span></a>
+                        <input class="btn btn-default btn-sm btn-sm form-control" style="text-align: center; width:50px; height:30px;" type="text" id="PageIndexValue" name="PageIndexValue">
+                        <a class="btn btn-sm btn-primary" href="javascript:;" title="转到指定页面">GO</a>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<script src="../../Scripts/Base/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery-migrate-1.2.1.js"></script>
+		<script src="../../Scripts/Base/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.antiforgery.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/bootstrap.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/SubMenu/bootstrap-submenu.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Dialog/dialog-plus.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+		<script src="../../Scripts/Views/PublicFunction.js" type="text/javascript"></script>
+		
+	</body>
+
+</html>

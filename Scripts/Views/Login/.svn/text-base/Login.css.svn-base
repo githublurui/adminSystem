@@ -1,0 +1,394 @@
+﻿/* Cubic Bezier Transition */
+
+/***
+Login page
+***/
+html{
+	height: 100%;
+}
+body{
+	background: #4383c4;
+	font-family: "Microsoft YaHei";
+	height: 100%;
+	min-height: 600px;
+	padding: 0;
+}
+.banner{
+	min-width: 1200px;
+}
+@media (min-width: 992px){
+	.container{
+		max-width: 1200px;
+	}	
+}
+@media (min-width: 768px){
+	.container{
+		max-width: 1200px;
+	}		
+}
+label{
+	margin-bottom: 0;
+}
+a:hover,
+a:focus{
+	text-decoration: none;
+}
+input:focus{
+	outline: none;
+}
+.login .content .form-group{
+	zoom: 1;
+}
+.login .content .form-group:after{
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+/*banner背景图*/
+.banner{
+	background: transparent url("../../../Images/banner.png") no-repeat center center;
+	background-size: cover;
+	height: 530px;
+	position: absolute;
+	top: 100px;
+	width: 100%;
+}
+/*中间的包含盒*/
+.container{
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	width: 1200px;
+}
+/*LOGO*/
+.login .logo {
+	margin-top: 30px;
+}
+.login .logo-link{
+	display: block;
+	line-height: 60px;
+	/* margin-left: -40px; */
+}
+.login .logo img{
+	display: block;
+}
+.login .logo span{
+	color: #fff;
+	font-size: 32px;
+}
+/*主体内容*/
+.login .content {
+	box-shadow: 0px 4px 8px 0px #333;
+	display: table;
+	overflow: visible;
+	position: absolute;
+	top: 199px;
+	right: 223px;
+}
+.login .content .login-form, .login .content .forget-form {
+	padding: 0px;
+	margin: 0px;
+}
+/*表单盒子*/
+.login .content .login-form{
+	background-color: #f5f8fb;
+	background: -webkit-linear-gradient(#ffffff,#f3f3f3);
+	background: -moz-linear-gradient(#ffffff,#f3f3f3);
+	background: -o-linear-gradient(#ffffff,#f3f3f3);
+	background: linear-gradient(#ffffff,#f3f3f3);
+	padding: 10px 25px 18px;
+	width: 305px;
+}
+/*表单标题*/
+.login .content h3 {
+	color: #333333;
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
+	font-weight: 500 ;
+	line-height: 42px;
+	margin: 0;
+}
+
+/*js：输入框box盒子外边框*/
+.focus{
+	border-radius: 5px;
+	transition: box-shadow 0.1s;
+	box-shadow: 0px 0px 1px 1px #3891d5;
+}
+.login .content .focus .form-group,
+.login .content .focus .form-code input{
+	border-color: #3891d5;
+}
+/*输入框group盒子以及验证码input*/
+.login .content .form-group,
+.login .content .form-code input{
+	background-color: #ffffff;
+	border: 1px solid #cfcfcf;
+	border-radius: 5px;
+	height: 38px;
+}
+/*输入框group盒子*/
+.login .content .form-group{
+	margin-bottom: 12px;
+}
+/*input框*/
+.login .content .form-control,
+.login .content .form-code input{
+	padding: 0 0 0 10px;
+}
+.login .content .form-control {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	color: #8290a3;
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	height: auto;
+	line-height: 36px;
+	width: 100%;
+}
+.login .content .form-control:focus, 
+.login .content .form-control:active {
+	/* border: 1px solid #c3ccda; */
+	
+}
+.login .content .form-control::-moz-placeholder {
+	color: #999999;
+	opacity: 1;
+}
+.login .content .form-control:-ms-input-placeholder {
+	color: #999999;
+}
+.login .content .form-control::-webkit-input-placeholder {
+	color: #999999;
+}
+/*验证码box盒子*/
+.code-box{
+	display: inline-block;
+}
+/*验证码code盒子*/
+.form-code{
+	display: inline-block;
+}
+/*input框*/
+.form-box .form-code input{
+	float: none;
+	width: 110px;
+}
+/*修改验证码盒子*/
+.change-code{
+	display: inline-block;
+}
+/*图片盒子*/
+.image-code{
+	background-color: #fff;
+	display: inline-block;
+	height: 38px;
+	line-height: 38px;
+	margin-top: -2px;
+	margin-left: 9px;
+	margin-right: 11px;
+	text-align: center;
+	vertical-align: middle;
+	width: 70px;	
+}
+/*换图片链接*/
+.form-code a{
+	color: #096bb7;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/*其他类型的表单盒子*/
+.login .content .form-orther{
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+/*记住密码label*/
+.login .content .rememberme {
+	color: #4c4c4c;
+}
+/*check小方框*/
+.check-btn{
+	background-color: transparent;
+	border: 1px solid #aaa;
+	display: inline-block;
+	height: 14px;
+	margin-top: -2px;
+	margin-right: 6px;
+	vertical-align: middle;
+	width: 14px;
+}
+/*js：显示打勾图片*/
+.show-right{
+	background: #fff url("../../../Images/right.png") no-repeat 0 0;
+	border: none;
+	background-size: 100% 100%;
+}
+/*隐藏的checkbox*/
+.login .content .hide-check{
+	visibility: hidden;
+}
+/*记住密码文字*/
+.login .content .rememberme span{
+	color: #666666;
+	font-weight: normal;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.login .content .rememberme span:hover{
+	color: #333;
+}
+.login .content .rememberme span:focus{
+	outline: none;	
+}
+/*忘记密码a链接*/
+.login .content .forget-password {
+	color: #666666;
+	font-size: 14px;
+	float: right;
+}
+.login .content .forget-password:hover{
+	color: #5a0b0e;
+}
+/*提交按钮*/
+.login .content .form-actions {
+	border: 1px solid #d4d4d4;
+	border-radius: 5px;
+	clear: both;
+}
+.login .content .form-actions > .btn {
+	background: -webkit-linear-gradient(#ffffff,#f4f4f4);
+	background: -moz-linear-gradient(#ffffff,#f4f4f4);
+	background: -o-linear-gradient(#ffffff,#f4f4f4);
+	background: linear-gradient(#ffffff,#f4f4f4);
+	border-bottom: 1px solid #fff;	
+	border-radius: 5px;
+	color: #666666;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 34px;
+	padding: 0;
+	width: 100%;
+}
+.login .content .form-actions > .btn:hover{
+	background: linear-gradient(#f4f4f4,#ffffff);
+}
+
+.content-shadow{
+	background: transparent url("../../../Images/shadow.png") no-repeat 0 0;
+	height: 47px;
+	position: absolute;
+	bottom: -10px;
+	width: 356px;
+	z-index: -1;
+}
+/* footer copyright */
+footer{
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+	width: 100%;
+}
+.company{
+	color: #fff;
+	font-size: 12px;
+}
+.company span{
+	margin: 0 3px;
+}
+@media (min-device-height:900px){
+	body{
+		min-height: 800px;
+		position: relative;
+	}
+	.login .logo {
+		margin-top: 40px;
+	}
+	.banner{
+		top: 170px;
+	}
+	.login .content {
+		top: 269px;
+	}
+	footer{
+		bottom: 40px;
+	}
+	.company{
+		color: #fff;
+		font-size: 14px;
+	}
+}
+@media (min-device-height:1080px){
+	.login .logo {
+		margin-top: 60px;
+	}
+	.banner{
+		top: 200px;
+	}
+	.login .content {
+		top: 299px;
+	}
+	footer{
+		bottom: 50px;
+	}
+	.company{
+		color: #fff;
+		font-size: 16px;
+	}
+}
+@media (min-device-height:1200px){
+	.login .logo {
+		margin-top: 80px;
+	}
+	.banner{
+		top: 260px;
+	}
+	.login .content {
+		top: 359px;
+	}
+}
+@media (device-height:1024px) {
+	.login .logo {
+		margin-top: 50px;
+	}
+	.banner{
+		top: 190px;
+	}
+	.login .content {
+		top: 289px;
+	}
+}
+@media (max-width:440px) {
+	.login .content {
+		width: 280px;
+		margin-top: 10px;
+	}
+	.login .content h3 {
+		font-size: 22px;
+	}
+	.forget-password {
+		display: inline-block;
+		margin-top: 20px;
+	}
+	.login-options .social-icons {
+		float: left;
+		padding-top: 3px;
+	}
+	.login .checkbox {
+		font-size: 13px;
+	}
+}
+
+/*to home link*/
+.form-actions a{
+	color: #666;
+	display: inline-block;
+	height: 34px;
+	width: 100%;
+}

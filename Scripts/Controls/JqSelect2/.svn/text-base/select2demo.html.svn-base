@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>select2</title>
+		<link rel="stylesheet" type="text/css" href="select2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../Content/bootstrap.min.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="select2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zh-CN.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<select class="select form-control" id="select" ">
+		  
+		</select>
+		<script type="text/javascript">
+			 var data = [{ id: 55, text: 'enhancement' }, { id: 1, text: 'bug' }, { id: 2, text: 'duplicate' }, { id: 3, text: 'invalid' }, { id: 4, text: 'wontfix' }];
+			 var data1=[1,2,3,2,5]	
+			$(".select").select2({
+			  data: data
+			})
+			
+		</script>
+	</body>
+</html>

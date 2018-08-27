@@ -1,0 +1,332 @@
+﻿/***************reset样式*****START*******/
+a:hover,
+a:focus{text-decoration: none;outline: none;}
+ul{padding-left: 0;}
+/*禁止选中已填选后的控件颜色框*/
+input:-webkit-autofill{box-shadow: 0 0 0 1000px #fff inset !important;}
+input:focus{border-color: transparent;box-shadow: 0 0 0 #fff;outline: none;}
+/***************reset样式*****END*******/
+/*清除浮动*/
+.page-box{zoom: 1;}
+.page-box:after{content: "";clear: both;display: block;height: 0;visibility: hidden;}
+/****基本结构样式*****/
+html,body{height: 100%;}
+body{min-width: 1180px;}
+.wrap{height: auto;min-height: 100%;}
+/****************Header********START**************/
+/*整个头部的样式*/
+.navbar-inverse{background-color: #d8dce3;border: none;border-radius: 0px;margin-bottom: 0;}
+/******* 顶部Banner的样式 ****START****/
+.page-header{background: transparent url("../Images/index-banner.png") no-repeat center center;box-shadow: none;background-size: cover;border: 0;filter: alpha(opacity=100);margin: 0;padding: 0;opacity: 1;}
+.page-box{margin: 0 auto;padding-top: 8px;padding-bottom: 8px;width: 1140px;}
+/*左侧***LOGO盒子*/
+.page-box .page-logo{float: left;line-height: 60px;}
+.page-box .page-logo .logo-index{height: 60px;margin-top: -4px;margin-right: 15px;}
+.page-box .page-logo span{color: #ffffff;font-size: 26px;font-family: "Microsoft YaHei";margin-left: 20px;}
+/*右侧***通知管理板块盒子*****/
+.menu-right{float: right;}
+/****列表导航盒子***START****/
+.notification-menu{list-style: none;}
+.notification-menu > li{display: inline-block;float: left;line-height: 60px;position: relative;}
+.notification-menu > li > a > i{font-size: 20px;margin-top: 6px;}
+/*导航下拉选中框样式*/
+.notification-menu .dropdown-toggle{border-color: #fff;background: transparent;-moz-border-radius: 0;-webkit-border-radius: 0;border-radius: 0;border: none;color: #ffffff;padding-left: 13px;padding-right: 13px;}
+.notification-menu .admin .dropdown-toggle{margin-right: 0;padding-right: 0;}
+.notification-menu a:hover .glyphicon{color: yellow;}
+/*激活悬浮时的统一样式*/
+.notification-menu .dropdown-toggle:hover,
+.notification-menu .dropdown-toggle:focus,
+.notification-menu .dropdown-toggle:active,
+.notification-menu .dropdown-toggle.active,
+.notification-menu .open .dropdown-toggle.dropdown-toggle{background-color: transparent;color: yellow;-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none;}
+.admin a:hover .caret,
+.admin a:focus .caret{border-top-color: yellow;}
+/*下拉选中框图片样式*/
+.notification-menu .dropdown-toggle img{-moz-border-radius: 23px;-webkit-border-radius: 23px;border-radius: 23px;margin-right: 18px;vertical-align: middle;width: 46px;}
+.info-message{font-size: 12px;}
+.notification-menu .dropdown-toggle .caret{border-top-color: #fff;margin-left: 5px;}
+.notification-menu .dropdown-toggle .badge{background-color: #629462;color: #fff;margin-top: -4px;vertical-align: middle;}
+.admin{margin-left: 20px;}
+/*下拉div菜单样式*/
+.notification-menu .dropdown-menu{background-color: #fff;border: 0;-moz-border-radius: 2px 0 2px 2px;-webkit-border-radius: 2px 0 2px 2px;border-radius: 2px 0 2px 2px;-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none;margin-top: 0px;min-width: 300px;padding: 0;}
+.notification-menu .dropdown-menu:after{border-bottom: 6px solid #65cea7;border-left: 6px solid transparent;border-right: 6px solid transparent;content: "";display: inline-block;right: 10px;position: absolute;top: -6px;}
+/*除管理人员以外的下拉div菜单样式*/
+.notification-menu .dropdown-menu-head{background: #fff}
+/*除管理人员以外的div下标题样式*/
+.notification-menu .dropdown-menu-head .title{background: #65cea7;color: #fff;padding: 15px;text-transform: uppercase;font-size: 12px;margin: 0;}
+/*管理人员下拉ul菜单样式*/
+.notification-menu .dropdown-menu-usermenu{background: #65cea7;min-width: 200px;padding: 5px;}
+/*除管理人员以外的 下拉ul菜单样式*/
+.notification-menu .dropdown-menu-head ul{border: 1px solid #ddd;border-top: 0;padding: 0;}
+/*下拉菜单子项*/
+.notification-menu .dropdown-menu li{display: block;margin: 0;float: none;background: none;padding: 15px;}
+/*管理人员下拉菜单子项*/
+.notification-menu .dropdown-menu-usermenu li{padding: 0;}
+/*除管理人员以外的下拉菜单子项样式*/
+.dropdown-list li{overflow: hidden;border-bottom: 1px solid #eee;}
+.dropdown-list li:last-child{border-bottom: 0;}
+/*下拉菜单子项链接*/
+.notification-menu .dropdown-menu li a{color: #fff;font-size: 13px;padding: 7px 10px;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px;-moz-transition: all 0.2s ease-out 0s;-webkit-transition: all 0.2s ease-out 0s;transition: all 0.2s ease-out 0s;}
+/*除管理人员以外的下拉菜单 链接样式*/
+.notification-menu .dropdown-menu-head li a{color: #333;padding: 0;opacity: 1;}
+.notification-menu .dropdown-menu li a:hover{background: #2a323f;color: #fff;}
+/*除管理人员以外的下拉菜单 链接悬浮样式*/
+.notification-menu .dropdown-menu-head li a:hover{background: none;color: #65cea7 !important;text-decoration: none;}
+/*下拉菜单子项的字体图标*/
+.notification-menu .dropdown-menu li i{font-size: 11px;margin-right: 5px;}
+/*除管理人员以外下拉菜单样式下*/
+/*邮件通知图像框*/
+.dropdown-list .thumb{width: 36px;float: left;}
+.dropdown-list .thumb img{width: 100%;display: block;vertical-align: middle;}
+/*邮件通知文本框*/
+.dropdown-list .desc{margin-left: 45px;display: block;}
+.dropdown-list .desc h5{font-size: 13px;margin-top: 7px;}
+.dropdown-list li:last-child{padding: 10px 15px;}
+.dropdown-list li .badge{float: right;}
+/****主导航条样式******START****/
+/*修改导航ul列表位置*/
+.navbar-nav{margin: 0 -15px;}
+/* .navbar-inverse .navbar-brand, */
+/*所有导航的链接样式*/
+.collapse .nav li > a{color: #333;padding: 10px 30px;}
+/*所有导航链接被悬浮的样式*/
+.collapse .nav li > a:hover{color: #fff;}
+/*悬浮，激活的一级导航统一样式*/
+/* .navbar-inverse .navbar-brand:hover, */
+.navbar-inverse .navbar-nav > li:hover,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus{background-color: #428bca;color: #fff;cursor: pointer;}
+#nav>li{position: relative;}
+.bottom-tran{border-bottom: 6px solid transparent;border-left: 6px solid transparent;border-right: 6px solid transparent;display: none;height: 0;margin-left: -6px;position: absolute;left: 50%;bottom: 0;width: 0;z-index: 1;}
+/*当前页（被选中的）一级导航样式*/
+.navbar-inverse .navbar-nav > li:hover,
+.collapse .navbar-nav .clicked{background-color: #428bca;}
+.navbar-inverse .navbar-nav > li:hover>a,
+.collapse .navbar-nav .clicked>a{color: #fff;}
+.navbar-inverse .navbar-nav > li:hover>.bottom-tran,
+.collapse .navbar-nav .clicked>.bottom-tran{border-bottom-color: #fff;display: block;}
+/*点击激活时，以及默认时的一级导航菜单样式*/ .navbar-collapse .open>.dropdown-menu,
+.collapse .dropdown-menu{background-color: #eee;}
+/*点击激活时，一级导航链接的样式*/
+#nav .nav .open > a{background-color: #eee;color: #333;}
+/*点击激活时，链接的悬浮样式*/
+.nav .open.dropdown-nav> a:hover{color: #333;}
+/*动态添加：悬浮时，当前元素以及父级元素被选中时的样式*/
+#nav .hover-color{background-color: #428bca;color: #fff;}
+/*二级导航内的三角图样式*/
+.navbar-inverse .navbar-nav > .dropdown > a .caret{border-top-color: #333 ;margin-left: 5px;}
+/*悬浮时，二级导航内的三角图样式*/
+.navbar-inverse .navbar-nav > .dropdown > a.hover-color .caret{border-top-color: #fff;}
+/*导航分隔线*/
+.nav-line{background-color: #bcbbbb;float: left;height: 20px;margin-top: 10px;width: 1px;}
+/****************Header********END**************/
+/*****************Body*********START**************/
+.body-content{padding-bottom: 40px;min-width: 1170px;}
+/*主体内容框*/
+/*当前页位置*/
+.body-content>h4.title{font-size: 20px;font-weight: 600;margin-top: 15px;margin-bottom: 10px;}
+/*****************Body*********END**************/
+/*****************Footer*********START**************/
+/*页脚*/
+footer{background: #4aa9f0;color: white;line-height: 40px;position: relative;margin-top: -40px;text-align: center;}
+/*****************Footer*********END**************/
+/********************页面共同样式******START*************/
+/*分页&页码&跳转盒子*/
+.paging{margin: 5px 0;}
+/*UL盒子*/
+.pagination{margin: 10px 0;}
+/*分页按钮组div*/
+.pagination .record-show{float: left;margin-left: 0;margin-right: 10px;}
+/*共同高度*/
+.pagination .record-show .input-inline,
+.pagination li>a,
+.page-enter{height: 30px;}
+.pagination li>a{line-height: 1;}
+/*页码输入input框*/
+.page-enter{text-align: center;width:50px;}
+.page-enter:hover,
+.page-enter:active,
+.page-enter:focus{background-color: #fff;}
+/*按钮大小*/
+.button-sm{padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px;}
+.button-md{}
+/********** 人员管理页 Person *********/
+/*页面内的链接按钮的共同样式*/
+.btn-group-function a.btn,
+.btn-func,
+.btn-sear,
+.btn-goto,
+.btn-func:hover,
+.btn-sear:hover,
+.btn-goto:hover,
+.btn-sear:focus{color: #fff;}
+/*添加功能按钮组*/
+.btn-group-function a.btn,
+.btn-func{background-color: #2b9cf0;}
+.btn-group-function span{display: inline-block;}
+.btn-group-function a.btn:hover,
+.btn-func:hover{background-color: #088df0;}
+/*输入框后的功能按钮*/
+.btn-sear,
+.btn-goto{background-color: #68af23;}
+.input-group-btn >.btn-sear:hover,
+.btn-goto:hover{background-color: #5baf09;z-index: auto;}
+/**功能输入框样式**/
+/*搜索栏盒子样式*/
+.MoreSearchDiv{margin-top: 10px;margin-bottom: 0px;display: none;}
+/*搜索框以及多选搜索框*/
+#search-box .input-group *,
+#MoreSearch .input-group>span,
+#MoreSearch .input-group>input{font-size: 12px;height: 30px;line-height: 18px;padding-top: 0;padding-bottom: 0;}
+#search-box .input-group-btn a{padding-top: 5px;padding-bottom: 5px;}
+/*高级搜索按钮*/
+.more-btn{padding-left: 19px;padding-right: 19px;}
+/*搜索icon*/
+.glyphicon-search{/* background-color: #eee; */line-height: 20px;height: 34px;margin: -2px -1px 0 -1px;}
+/*搜索框行*/
+.search-group{margin-bottom: 10px;}
+#MoreSearch .search-group:last-child{margin-bottom: 0;}
+.dropdown-menu.usetwentyfour{background-color: #fff;}
+/*表格内容*/
+/*表格box*/
+#table-wrap{margin-top: 10px;}
+/*表格table*/
+.table{margin-bottom: 0;}
+/*表格头部行*/
+#table-wrap thead tr{background-color: #f0f5fa;}
+/*表格头部单元格*/
+#thead th{border-bottom: none;}
+/*表格内容单元格*/
+#table-wrap td{padding-top: 5px;padding-bottom: 5px;}
+#table-wrap tr:hover >td{background-color: #fffed5;}
+/*表格内功能按钮*/
+.group-btn a{margin-right: 5px;line-height: 20px;height: 20px;padding: 0;width: 20px;}
+.group-btn a:last-child{margin: 0;}
+/********** 个人信息页 Information *********/
+.form-list,
+.form-box,
+.tr-button-group{zoom: 1;}
+.form-list:after,
+.form-box:before,
+.form-box:after,
+.tr-button-group:before{content: "";clear: both;display: block;height: 0;visibility: hidden;}
+/*add information 主体内容盒子*/
+.body-background{background-color: #fafbfd;box-shadow: 0px 0px 5px 1px #ccc;border-bottom: 1px solid #d3deed;margin: 0;padding: 20px 0 0 0;}
+.body-background .col-sm-12{padding: 0;}
+/*页面内容标题*/
+.info-title{background: linear-gradient(to bottom,#ffffff,#f4f4f4);border-top: 1px solid #dfdfdf;border-left: 2px solid #387edd;border-bottom: 1px solid #dfdfdf;color: #3a609d;font-size: 16px;font-family: "Microsoft YaHei";line-height: 34px;margin-top: 0;margin-bottom: 0;padding-left: 20px;}
+/*页面form盒子*/
+.info-form{background-color: #fafbfd;border-radius: 0 0 5px 5px;padding: 20px 48px 60px;}
+/*表单内容包含盒*****information*/
+.form-list{margin-top: 50px;}
+/*表单行row包含盒*/
+.form-box{height: 48px;line-height: 48px;position: relative;width: 100%;}
+.form-box:hover{background-color: #f5f5f5;}
+/*修改照片，表单行row包含盒*/
+.form-photo-box{height: 240px;padding-left: 100px;position: relative;
+/*text-align: center; */width: 100%;}
+/*内容在右边的表单行row包含盒*/
+.box-right{padding-left: 108px;}
+/*td包含盒*/
+.form-box>div{font-size: 14px;float: left;line-height: 48px;padding-top: 0;padding-bottom: 0;}
+/*输入框对应标题，td包含盒*/
+.input-form{color: #333;padding-right: 10px;text-align: right;width: 24%;}
+/*输入框内容，td包含盒*/
+.input-form+td{padding: 3px;width: 36%;}
+/*星号*/
+.important{color: transparent;font-size: 16px;margin-right: 8px;}
+/*label*/
+.form-box label{margin-bottom: 0;}
+/*表单的input框*/
+.form-box input{border: 1px solid #ddd;border-radius: 3px;line-height: 24px;padding-left: 10px;padding-right: 10px;}
+.form-box input[type="text"],
+.form-box input[type="password"]{background-color: transparent;width: 205px;}
+.form-box input[type="text"]:focus,
+.form-box input[type="password"]:focus{background-color: #fff;border-color: #ff8676;outline: none;}
+/*提示内容框下的文字*****add*/
+.warning-infor span{color: #4e4b4b;display: inline-block;height: 28px;line-height: 28px;margin-top: 10px;padding: 0 8px;}
+.warning-icon{background: transparent url("../Images/warning.png") no-repeat 0 0;display: inline-block;height: 16px;margin-top: -4px;margin-right: 5px;vertical-align: middle;width: 16px;}
+/*性别单选label*/
+.sex-radio-label{font-weight: normal;margin-right: 20px;}
+/*单选span包含盒子*/
+.radio-box{display: inline-block;line-height: 1;position: relative;}
+/*替代默认的单选图标*/
+.radio-icon{background: transparent url("../Images/radio.png") no-repeat 0 0 ;height: 12px;line-height: 1;min-height: 12px;margin: 0;
+/*opacity: 0.8; */padding: 0;position: absolute;top: 0;left: 0;width: 12px;}
+/*默认的单选input框*/
+.sex-radio-label input{line-height: 1;margin: 0;}
+/*选中后更换的图片*/
+.sex-radio-label input:checked + .radio-icon{background-image: url("../Images/radio-checked.png")}
+/*密码输入框td盒子*/
+.div-pass{position: relative;}
+/*上传图片*/
+.up-box,
+.up-photo{height: 140px;width: 120px;}
+/*td包含盒*/
+.up-box{background: #fff url("../Images/cross.png") no-repeat center center;box-shadow: 0px 0px 5px #eee;
+/*margin: 0 auto; */}
+/*图片img*/
+.up-photo{border-image-width: 0;border-color: transparent;color: transparent;display: inline-block;}
+/*表单内的按钮组*/
+.form-box button/* ,
+.tr-btn button */{color: #fff;}
+/*上传图片&修改密码按钮*/
+.btn-up-photo,
+.btn-change-pass{background-color: #2b9cf0;border-radius: 0;padding: 0;}
+.btn-up-photo:hover,
+.btn-change-pass:hover,
+.tr-sub:hover{background-color: #1277c3;color: #fff;}
+/*上传图片单独样式*/
+.btn-up-photo{color: #fff;font-size: 12px;height: 28px;line-height: 28px;margin-top: 5px;width: 120px;}
+/*修改密码单独样式*/
+.btn-change-pass{border-radius: 0 3px 3px 0;height: 26px;line-height: 26px;margin-right: 0;padding: 0 5px;position: absolute;top: 11px;right: 0px;text-align: center;}
+/*图标icon*/
+.pen-icon{background: transparent url("../Images/change-photo.png") no-repeat 0 0 ;display: inline-block;height: 19px;margin-top: -4px;margin-right: 5px;vertical-align: middle;width: 19px;}
+.btn-change-pass .pen-icon{margin-right: 0;}
+/*提交按钮&取消按钮盒子*/
+.form-button-group{height: 50px;line-height: 50px;margin-top: 30px;text-align: center;width: 100%;}
+/*提交btn&取消btn*/
+.form-sub,
+.form-can{color: #fff;font-size: 18px;font-family: "Microsoft YaHei";line-height: 32px;padding: 0;width: 125px;}
+/*提交btn*/
+.form-sub{background-color: #2b9cf0;margin-right: 30px;}
+/*取消btn*/
+.form-can{background-color: #b9b8b8;}
+.form-sub:hover,
+.form-sub:focus{background-color: #1277c3;color: #fff;}
+.form-can:hover,
+.form-can:focus{background-color: #919191;color: #fff;}
+/*****媒体查询样式****/
+@media (min-width: 768px){.container-nav{max-width: 1170px;}}
+/*搜索框以及多选搜索框*/
+#search-box .input-group *,
+#MoreSearch .input-group>span,
+#MoreSearch .input-group>input{font-size: 12px;height: 30px;line-height: 18px;padding-top: 0;padding-bottom: 0;}
+#search-box .input-group-btn a{padding-top: 5px;padding-bottom: 5px;}
+/*高级搜索框*/
+.more{padding-left: 19px;padding-right: 19px;}
+/*搜索icon*/
+.glyphicon-search{/* background-color: #eee; */line-height: 20px;height: 34px;margin: -2px -1px 0 -1px;}
+/*搜索框行*/
+.search-group{margin-bottom: 10px;}
+.input-group select{height: 30px;}
+#MoreSearch .search-group:last-child{margin-bottom: 0;}
+.dropdown-menu.usetwentyfour{background-color: #fff;}
+/*表格*/
+#table-wrap{margin-top: 10px;}
+#table-wrap td{padding-top: 5px;padding-bottom: 5px;}
+#table-wrap thead tr{background-color: #f0f5fa;}
+#table-wrap tr:hover >td{background-color: #fffed5;}
+.group-btn a{margin-right: 5px;line-height: 20px;height: 20px;padding: 0;width: 20px;}
+.group-btn a:last-child{margin: 0;}
+.btn-group-box{margin: 5px 0;padding: 20px 0;}
+.paging .btn-group{margin-left: 10px;}
+.table{margin-bottom: 0;}
+#thead th{border-bottom: none;}
+.pagination{margin: 10px 0;}
+.pagination .record-show{float: left;margin-left: 0;margin-right: 10px;}
+.pagination .record-show .input-inline,
+.pagination li>a,
+.page-enter{height: 30px;}
+.pagination li>a{line-height: 1;}
+.page-enter{text-align: center;width:50px;}

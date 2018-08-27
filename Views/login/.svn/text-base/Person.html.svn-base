@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>人员管理</title>
+		<link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/SubMenu/bootstrap-submenu.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Views/Person/Person.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Dialog/dialog-plus.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+		<link href="../../Content/site.css" rel="stylesheet" type="text/css" />
+		<script src="../../Scripts/Base/modernizr-2.6.2.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="navbar navbar-inverse">
+				<div class="page-header">
+					<div class="page-box">			
+						<div class="page-logo">
+							<a href="/Home/Index"> 
+							<img src="../../Images/logo-nosign.png" alt="logo" class="logo-index" /> 
+							<img src="../../Images/logo-text.png" alt="">
+							</a>
+						</div>
+						<div class="menu-right">
+							<ul class="notification-menu">
+								<li>
+									<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+										<i class="glyphicon glyphicon-tasks"></i>
+										<br />
+										<span class="info-message">最新数据</span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-head pull-right">
+										<h5 class="title">You have 8 pending task</h5>
+										<ul class="dropdown-list user-list">
+											<li class="new">
+												<a href="#">
+													<div class="task-info">
+														<div>
+															Database update
+														</div>
+													</div>
+													<div class="progress progress-striped">
+														<div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+															<span class="">40%</span>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="new">
+												<a href="#">
+													<div class="task-info">
+														<div>
+															Dashboard done
+														</div>
+													</div>
+													<div class="progress progress-striped">
+														<div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
+															<span class="">90%</span>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="task-info">
+														<div>
+															Web Development
+														</div>
+													</div>
+													<div class="progress progress-striped">
+														<div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
+															<span class="">66% </span>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="task-info">
+														<div>
+															Mobile App
+														</div>
+													</div>
+													<div class="progress progress-striped">
+														<div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
+															<span class="">33% </span>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="task-info">
+														<div>
+															Issues fixed
+														</div>
+													</div>
+													<div class="progress progress-striped">
+														<div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+															<span class="">80% </span>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="new">
+												<a href="">See All Pending Task</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+										<i class="glyphicon glyphicon-envelope"></i>
+										<br />
+										<span class="info-message">消息记录</span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-head pull-right">
+										<h5 class="title">You have 5 Mails </h5>
+										<ul class="dropdown-list normal-list">
+											<li class="new">
+												<a href=""> <span class="thumb"> <img src="images/photos/user1.png" alt="" /> </span> <span class="desc"> <span class="name"> John Doe <span class="badge badge-success">new</span> </span> <span class="msg">Lorem ipsum dolor sit amet...</span> </span>
+												</a>
+											</li>
+											<li>
+												<a href=""> <span class="thumb"> <img src="images/photos/user2.png" alt="" /> </span> <span class="desc"> <span class="name">Jonathan Smith</span> <span class="msg">Lorem ipsum dolor sit amet...</span> </span>
+												</a>
+											</li>
+											<li>
+												<a href=""> <span class="thumb"> <img src="images/photos/user3.png" alt="" /> </span> <span class="desc"> <span class="name">Jane Doe</span> <span class="msg">Lorem ipsum dolor sit amet...</span> </span>
+												</a>
+											</li>
+											<li>
+												<a href=""> <span class="thumb"> <img src="images/photos/user4.png" alt="" /> </span> <span class="desc"> <span class="name">Mark Henry</span> <span class="msg">Lorem ipsum dolor sit amet...</span> </span>
+												</a>
+											</li>
+											<li>
+												<a href=""> <span class="thumb"> <img src="images/photos/user5.png" alt="" /> </span> <span class="desc"> <span class="name">Jim Doe</span> <span class="msg">Lorem ipsum dolor sit amet...</span> </span>
+												</a>
+											</li>
+											<li class="new">
+												<a href="">Read All Mails</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+										<i class="glyphicon glyphicon-bell"></i>
+										<br />
+										<span class="info-message">通知公告</span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-head pull-right">
+										<h5 class="title">Notifications</h5>
+										<ul class="dropdown-list normal-list">
+											<li class="new">
+												<a href=""> <span class="label label-danger"> <i class="fa fa-bolt"></i> </span> <span class="name">Server #1 overloaded. </span> <em class="small">34 mins</em> </a>
+											</li>
+											<li class="new">
+												<a href=""> <span class="label label-danger"> <i class="fa fa-bolt"></i> </span> <span class="name">Server #3 overloaded. </span> <em class="small">1 hrs</em> </a>
+											</li>
+											<li class="new">
+												<a href=""> <span class="label label-danger"> <i class="fa fa-bolt"></i> </span> <span class="name">Server #5 overloaded. </span> <em class="small">4 hrs</em> </a>
+											</li>
+											<li class="new">
+												<a href=""> <span class="label label-danger"> <i class="fa fa-bolt"></i> </span> <span class="name">Server #31 overloaded. </span> <em class="small">4 hrs</em> </a>
+											</li>
+											<li class="new">
+												<a href="">See All Notifications</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="admin">
+									<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+										<img src="../../Images/photo.png" alt="" />admin<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+										<li>
+											<a href="../Information/Information.html"> <i class="glyphicon glyphicon-user"></i> 个人信息 </a>
+										</li>
+										<li>
+											<a href="/MyFile/Index"> <i class="glyphicon glyphicon-cloud"></i> 我的网盘 </a>
+										</li>
+										<li>
+											<a href="/MySpace/ChangePassword"> <i class="glyphicon glyphicon-lock"></i> 修改密码 </a>
+										</li>
+										<li>
+											<a href="../Login/Login.html"> <i class="glyphicon glyphicon-log-out"></i> 安全退出 </a>
+										</li>
+										<li>
+											<a href="#"> <i class="glyphicon glyphicon-book"></i> 下载使用说明 </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container container-nav">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span> 
+						</button>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul id="nav" class="nav navbar-nav">
+							<li>
+								<i class="bottom-tran"></i>
+								<a class="primary-nav" tabindex="0" href="../Home/Home.html">首页</a>
+							</li>
+							<li class="dropdown dropdown-nav">
+								<i class="bottom-tran"></i>
+								<a class="primary-nav" tabindex="0" data-toggle="dropdown"> 公文流转</a>
+								<ul class="dropdown-menu" role="menu">
+									<li class="dropdown-submenu dropdown-nav">
+										<a tabindex="0" data-toggle="dropdown">外部文件</a>
+										<ul class="dropdown-menu">
+											<li>
+												<a tabindex="0" href="/File/Create">创建收文</a>
+											</li>
+											<li>
+												<a tabindex="0" href="/File/Rec">收文流转</a>
+											</li>
+										</ul>
+									</li>
+									<li class="dropdown-submenu dropdown-nav">
+										<a tabindex="0" data-toggle="dropdown">内部文件</a>
+										<ul class="dropdown-menu">
+											<li>
+												<a tabindex="0" href="/File/Create">创建收文</a>
+											</li>
+											<li class="dropdown-submenu dropdown-nav">
+												<a tabindex="0" data-toggle="dropdown">内部文件</a>
+												<ul class="dropdown-menu">
+													<li>
+														<a tabindex="0" href="/File/Create">创建收文</a>
+													</li>
+													<li>
+														<a tabindex="0" href="/File/Rec">收文流转</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown dropdown-nav">
+								<i class="bottom-tran"></i>
+								<a class="primary-nav" tabindex="0" data-toggle="dropdown"> 组织架构</a>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a tabindex="0" href="/Struct/Organ">机构管理</a>
+									</li>
+									<li>
+										<a tabindex="0" href="/Struct/Organ">部门管理</a>
+									</li>
+									<li>
+										<a tabindex="0" href="/Struct/Organ">职务管理</a>
+									</li>
+								</ul>
+							</li>
+							<li class="clicked">
+								<i class="bottom-tran"></i>
+								<a class="primary-nav" tabindex="0" href="/Person/Person.html">人员管理</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container  container-body">
+				<h4 class="title">人员管理</h4>
+				<div class="row">
+					<div class="col-md-8 col-sm-8 col-xs-8">
+						<div class="btn-group-function">
+							<a href="javascript:showDialog('新增用户', 'CreatePerson.html',true,{w: 400,h: 280});" class="btn btn-sm">新增用户</a>
+							<a href="../Add/Add.html" class="btn btn-sm">激活用户</a>
+							<a href="javascript:postToUrl('确定锁定选择用户？', '/Person/LockPersons', {ids:getChecked(&quot;Check_Item&quot;)});" class="btn btn-sm">锁定用户</a>
+							<a href="javascript:postToUrl('确定解锁选择用户？', '/Person/UnLockPersons', {ids:getChecked(&quot;Check_Item&quot;)});" class="btn btn-sm">解锁用户</a>
+							<a href="javascript:showDialog('配置选择用户角色', '/Person/CheckPersonRole');" class="btn btn-sm">配置角色</a>
+							<span class="dropdown">
+								<a class="btn btn-sm dropdown-toggle" aria-expanded="false" href="javascript:;" data-toggle="dropdown">导出</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#" onclick="exportSelected(); return false;">选择项到.xls文件 </a>
+									</li>
+									<li>
+										<a href="#" onclick="exportPage(); return false;">当前页数据到.xls文件 </a>
+									</li>
+									<li>
+										<a href="#" onclick="exportAll(); return false;">所有数据到.xls文件 </a>
+									</li>
+								</ul>	
+							</span>
+							
+						</div>
+					</div>
+					<div id="search-box" class="col-md-4 col-sm-4 col-xs-4">
+						<div class="input-group">
+							<span class="input-group-addon">姓名</span>
+							<input type="text" class="form-control" id="sCond0" />
+							<span class="input-group-btn"> 
+								<a class="btn btn-sear glyphicon glyphicon-search" href="javascript:postSearch();"></a> 
+								<a class="btn btn-default more-btn" href="javascript:MoreSearch('MoreSearch');" title="展开或收起查询条件">高级搜索</a> 
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 MoreSearchDiv" id="MoreSearch">
+						<div class="row search-group">
+							<div class="col-md-3 col-sm-3 col-xs-3">
+								<div class="input-group">
+									<span class="input-group-addon">角色</span>
+									<input type="text" class="form-control" id="sCond1" />
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3">
+								<div class="input-group">
+									<span class="input-group-addon">邮箱</span>
+									<input type="text" class="form-control" id="sCond2" />
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3">
+								<div class="input-group">
+									<span class="input-group-addon">激活状态</span>
+									<select id="sCond3" class="form-control">
+										<option value=""></option>
+										<option value="0">未激活</option>
+										<option value="1">已激活</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3">
+								<div class="input-group">
+									<span class="input-group-addon">锁定状态</span>
+									<select id="sCond4" class="form-control">
+										<option value=""></option>
+										<option value="1">未锁定</option>
+										<option value="0">已锁定</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row search-group">
+							<div class="col-md-3 col-sm-3 col-xs-3">
+								<div class="input-group">
+									<span class="input-group-addon">起始注册时间</span>
+									<input type="text" class="form-control timepicker" id="sCond5" />
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-3">
+								<div class="input-group">
+									<span class="input-group-addon">截止注册时间</span>
+									<input type="text" class="form-control timepicker" id="sCond6" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12" id="table-wrap">
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered table-hover">
+								<thead id="thead">
+									<tr>
+										<th style="width:30px;"> <input id="SelectAll" type="checkbox" onclick="checkAll('SelectAll', 'Check_Item')" /> </th>
+										<th>手机</th>
+										<th>姓名</th>
+										<th>邮箱</th>
+										<th>注册时间</th>
+										<th>状态</th>
+										<th>角色</th>
+										<th style="width:60px;">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+									<tr>
+										<td> 
+											<input type="checkbox" name="Check_Item" value="1" /> 
+										</td>
+										<td>PhoneNumber</td>
+										<td>UserName</td>
+										<td>E-Mail@sth.com</td>
+										<td>Createtime</td>
+										<td> 
+											<span class="text-success">正常</span> 
+										</td>
+										<td>RoleNames</td>
+										<td> 
+											<span class="input-group-btn group-btn">
+												<a class="btn btn-xs btn-func" href="javascript:showDialog('配置角色', '/Person/CheckPersonRole?pid=1');" title="配置角色"> 
+													<i class="glyphicon glyphicon-star"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定激活该用户？', '/Person/ActivationPersons', {ids:&quot;1&quot;});" title="激活该用户"> 
+													<i class="glyphicon glyphicon-flash"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定锁定该用户？', '/Person/LockPersons', {ids:&quot;1&quot;});" title="锁定该用户"> 
+													<i class="glyphicon glyphicon-minus-sign"></i> 
+												</a> 
+												<a class="btn btn-xs btn-func" href="javascript:postToUrl('确定解锁该用户？', '/Person/UnLockPersons', {ids:&quot;1&quot;});" title="解锁该用户"> 
+													<i class="glyphicon glyphicon-plus-sign"></i> 
+												</a> 
+											</span> 
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 paging">
+						<ul class="pagination">
+							<div class="btn-group record-show">
+								<select class="form-control input-inline" id="PageSize_Select">
+									<option value="10" selected="">10</option>
+									<option value="20">20</option>
+									<option value="50">50</option>
+									<option value="100">100</option>
+								</select>
+							</div>
+							<li>
+								<a class="page-num" href="#" onclick="turnToPage('1'); return false;">首页</a>
+							</li>
+							<li>
+								<a class="page-num" href="#" onclick="turnToPage('1'); return false;">上页</a>
+							</li>
+							<li>
+								<a class="page-num" href="#">1</a>
+							</li>
+							<li>
+								<a class="page-num" href="#">2</a>
+							</li>
+							<li>
+								<a class="page-num" href="#">3</a>
+							</li>
+							<li>
+								<a class="page-num" href="#" onclick="turnToPage('1'); return false;">下页</a>
+							</li>
+							<li>
+								<a class="page-num" href="#" onclick="turnToPage('1'); return false;">末页</a>
+							</li>
+							<div class="btn-group">
+								<a class="btn btn-default btn-sm disabled" href="javascript:;"> 记录数:<span class="text-danger">3</span> 
+								</a>
+								<a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;"> 当前页:
+									<span class="text-success">1</span> / 
+									<span class="text-danger">1</span> 
+								</a>
+							</div>
+							<div class="btn-group">
+								<a class="btn btn-default btn-sm btn-outline disabled" href="javascript:;"> <span>转到</span> </a>
+								<input class="btn btn-default btn-sm form-control page-enter" style="" type="text" id="PageIndexValue" name="PageIndexValue" />
+								<a class="btn btn-goto btn-sm @gstr" href="#" onclick="goAjaxPgIndex(); return false;" title="转到指定页面">GO</a>
+							</div>
+							<div class="btn-group">
+								<img id="Load_personList" style="display:none;" src="../../Images/loading.gif" />
+							</div>
+						</ul>
+					</div>
+				</div>
+				<hr />
+			</div>
+		</div>
+		<footer>&copy;2017 - 我的应用程序</footer>
+		<script src="../../Scripts/Base/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.antiforgery.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/bootstrap.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/respond.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/SubMenu/bootstrap-submenu.js" type="text/javascript"></script>
+		<!--<script src="../../Scripts/Controls/SubMenu/bindsubmenu.js" type="text/javascript"></script>-->
+		<script src="../../Scripts/Controls/Dialog/dialog-plus.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../Scripts/Views/PublicFunction.js" type="text/javascript"></script>
+		<script src="../../Scripts/Views/Person/Index.js" type="text/javascript"></script>
+	</body>
+
+</html>

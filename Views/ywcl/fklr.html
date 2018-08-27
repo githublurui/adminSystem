@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>反馈单录入</title>
+		<link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="../../Content/site.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/SubMenu/bootstrap-submenu.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Dialog/dialog-plus.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../Scripts/Controls/DataTables/table.css">
+		<script src="../../Scripts/Base/modernizr-2.6.2.js" type="text/javascript"></script>
+		<!--[if lt IE 9]>
+		         <style>
+				.body-content{
+					width: 1140px;
+				}
+		         </style>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="container body-content">
+				<h4 class="title">反馈单录入</h4>
+				<form action="/Sjcj/CreateFkd" class="form-horizontal" id="createForm" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="0pq_ScT8uvBRpywSmXy25AUmXFkxnuSP97fD24v4xHwqV3kOX4lFt8qdwWDlKKNsqzs9cEuw3nWodQx9KX01wThmh4rYPvyUd9s1buBrw401">        <div class="form-group">
+				            <label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">类别</label>
+				            <div class="col-md-4 col-sm-4 col-xs-4">
+				                <select class="form-control" name="d1">
+				                    <option value="信用数据填写错误">信用数据填写错误</option>
+				                    <option value="信用数据补报">信用数据补报</option>
+				                    <option value="信用异议">信用异议</option>
+				                    <option value="数据上报超时">数据上报超时</option>
+				                    <option value="数据变更">数据变更</option>
+				                </select>
+				            </div>
+				            <label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">紧急程度</label>
+				            <div class="col-md-4 col-sm-4 col-xs-4">
+				                <select class="form-control" name="d2">
+				                    <option value="一般">一般</option>
+				                    <option value="紧急">紧急</option>
+				                    <option value="特急">特急</option>
+				                </select>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">反馈人</label>
+				            <div class="col-md-4 col-sm-4 col-xs-4">
+				                <input type="text" class="form-control" name="d3" value="张三">
+				            </div>
+				            <label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">反馈时间</label>
+				            <div class="col-md-4 col-sm-4 col-xs-4">
+				                <input type="text" class="form-control" name="d4" value="2018-01-20">
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">机关名称</label>
+				            <div class="col-md-10 col-sm-10 col-xs-10">
+				                <input type="text" class="form-control" name="d6">
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">反馈内容</label>
+				            <div class="col-md-10 col-sm-10 col-xs-10">
+				                <textarea class="form-control" name="d5" rows="8"></textarea>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <div class="col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10">
+				                <input type="submit" value="提交" class="btn btn-success">
+				                <a class="btn btn-success" href="javascript:;" onclick="history.back()">返回</a>
+				            </div>
+				        </div>
+				</form>
+			</div>
+		</div>
+		<script src="../../Scripts/Base/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery-migrate-1.2.1.js"></script>
+		<script src="../../Scripts/Base/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.antiforgery.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/bootstrap.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/SubMenu/bootstrap-submenu.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Dialog/dialog-plus.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+		<script src="../../Scripts/Views/PublicFunction.js" type="text/javascript"></script>
+		
+	</body>
+
+</html>

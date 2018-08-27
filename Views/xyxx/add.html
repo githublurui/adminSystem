@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>新增</title>
+		<link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+		<script src="../../Scripts/Base/modernizr-2.6.2.js" type="text/javascript"></script>
+	</head>
+	<style type="text/css">
+		.add-person {
+			padding-bottom: 10px;
+		}
+	</style>
+
+	<body>
+
+		<div class="">
+			<form action="/Xyzj/Createsjpz" style="width: 770px;" class="form-horizontal" id="createForm" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="LmWPC7Yn6P58tcsQGqgSecp0FMGPHzNHsPViyI6aHL5ptX0ozwyQ_j_itAAY1KzMg3afj-MK_4tzZLfRGyAyvTl3aV776jqRqQWAOlegsiI1">
+				<div class="form-group">
+					<label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">数据名称</label>
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<input type="text" class="form-control" name="d0">
+					</div>
+					<label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">数据类型</label>
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<select class="form-control" name="d1">
+							<option value="字符串">字符串</option>
+							<option value="数值">数值</option>
+							<option value="日期">日期</option>
+							<option value="日期时间">日期时间</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">长度</label>
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<input type="text" class="form-control" name="d2">
+					</div>
+					<label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">是否必须</label>
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<select class="form-control" name="d3">
+							<option value="是">是</option>
+							<option value="否">否</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 col-sm-2 col-xs-2 control-label text-danger">备注</label>
+					<div class="col-md-10 col-sm-10 col-xs-10">
+						<input type="text" class="form-control" name="d4">
+					</div>
+				</div>
+				<!--<div class="form-group">
+					<div class="col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10">
+						<input type="submit" value="提交" class="btn btn-success">
+						<a class="btn btn-success" href="javascript:window.parent.closeDialog();">取消</a>
+					</div>
+				</div>-->
+			</form>
+		</div>
+		<script src="../../Scripts/Base/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.antiforgery.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/bootstrap.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/respond.js" type="text/javascript"></script>
+	</body>
+
+</html>

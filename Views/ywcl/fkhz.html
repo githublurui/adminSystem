@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>反馈单汇总报表</title>
+		<link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="../../Content/site.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/SubMenu/bootstrap-submenu.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Dialog/dialog-plus.css" rel="stylesheet" type="text/css" />
+		<link href="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../Scripts/Controls/DataTables/table.css">
+		<script src="../../Scripts/Base/modernizr-2.6.2.js" type="text/javascript"></script>
+		<style type="text/css">
+			.headerInfo {}
+			.headerInfo p {
+				text-align: center;
+				font-size: large;
+				font-weight: bold;
+			}
+			.headerInfo span {
+				float: right;
+				font-size: small;
+			}
+			.print_table {
+				width: 100%;
+				border-collapse: collapse;
+				border-spacing: 0;
+				padd: expression(this.cellPadding=0);
+				border: 1px solid rgb(85, 90, 85);
+				font-size: 11px;
+			}
+			.thead_td {
+				padding: 5px;
+				text-align: center;
+				border: 1px solid rgb(85, 90, 85);
+				font-weight: bold;
+			}
+			.tbody_td {
+				padding: 5px;
+				text-align: center;
+				border: 1px solid rgb(85, 90, 85);
+			}
+			.signatureArea {}
+			.pageNum {
+				float: right;
+			}
+			.foodSpan {
+				margin: 20px;
+			}
+			.pageBreak {
+				page-break-after: always;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="container body-content">
+				<h4 class="title">反馈单汇总报表</h4>
+				<div class="row marbom">
+					<div class="col-md-4 col-sm-4">
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">反馈时间</span>
+							<div class="input-group input-group-sm" style="border:1px solid #cccccc;">
+								<div class="col-md-6 col-sm-6">
+									<input type="text" class="form-control input-sm timepicker" id="sCond0">
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<input type="text" class="form-control input-sm timepicker" id="sCond10">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 text-center">
+					<input type="hidden" id="selectIndex">
+					<a class="btn btn-success" href="javascript:postReport();">确定</a>
+				</div>
+				<div id="">
+
+					<!--表头-->
+					<div class="headerInfo" id="headerInfo">
+						<p>反馈单汇总报表</p>
+						<span class="floatRight">打印日期：2018 年 1 月 24 日</span>
+					</div>
+					<!--结束表头-->
+					<!--表内容-->
+					<table id="tabContent" class="print_table">
+						<thead>
+							<tr>
+								<td class="thead_td">信源单位</td>
+								<td class="thead_td">提交反馈单数量</td>
+								<td class="thead_td">办结反馈单数量</td>
+								<td class="thead_td">超期反馈单数量</td>
+								<td class="thead_td">反馈时间</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tbody_td">河池市税务局</td>
+								<td class="tbody_td">234</td>
+								<td class="tbody_td">222</td>
+								<td class="tbody_td">12</td>
+								<td class="tbody_td">2018/1/24 0:00:00</td>
+							</tr>
+							<tr>
+								<td class="tbody_td">河池市工商局</td>
+								<td class="tbody_td">43</td>
+								<td class="tbody_td">33</td>
+								<td class="tbody_td">10</td>
+								<td class="tbody_td">2018/1/24 0:00:00</td>
+							</tr>
+							<tr>
+								<td class="tbody_td">河池市园林局</td>
+								<td class="tbody_td">77</td>
+								<td class="tbody_td">66</td>
+								<td class="tbody_td">11</td>
+								<td class="tbody_td">2018/1/24 0:00:00</td>
+							</tr>
+							<tr>
+								<td class="tbody_td">河池市园林局</td>
+								<td class="tbody_td">54</td>
+								<td class="tbody_td">45</td>
+								<td class="tbody_td">9</td>
+								<td class="tbody_td">2018/1/24 0:00:00</td>
+							</tr>
+							<tr>
+								<td class="tbody_td">河池市统计局</td>
+								<td class="tbody_td">65</td>
+								<td class="tbody_td">50</td>
+								<td class="tbody_td">15</td>
+								<td class="tbody_td">2018/1/24 0:00:00</td>
+							</tr>
+						</tbody>
+					</table>
+					<!--结束表内容-->
+					<!--页脚-->
+					<div class="signatureArea" id="footerInfo">
+						<span class="pageNum">1/1</span>
+					</div>
+					<div class="signatureArea">
+						<span class="foodSpan">制表：管理员</span>
+					</div>
+					<!--结束页脚-->
+
+				</div>
+				<div class="col-md-12 text-center">
+					<a href="javascript:printEnter('mPrintArea', 20);" class="btn btn-warning">打印</a>
+				</div>
+			</div>
+		</div>
+		<script src="../../Scripts/Base/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery-migrate-1.2.1.js"></script>
+		<script src="../../Scripts/Base/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/jquery.antiforgery.js" type="text/javascript"></script>
+		<script src="../../Scripts/Base/bootstrap.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/SubMenu/bootstrap-submenu.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Dialog/dialog-plus.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+		<script src="../../Scripts/Controls/Datepicker/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+		<script src="../../Scripts/Views/PublicFunction.js" type="text/javascript"></script>
+
+	</body>
+
+</html>
